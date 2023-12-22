@@ -14,3 +14,6 @@ Useful for remote environments/password fields where pasting may not be possible
 - Close PowerToys
 - Extract the archive to `%LOCALAPPDATA%\Microsoft\PowerToys\PowerToys Run\Plugins`
 - Open PowerToys
+
+## Example
+![InputTyper Demonstration](/images/InputTyper.gif)
