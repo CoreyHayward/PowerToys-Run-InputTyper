@@ -15,5 +15,12 @@ Useful for remote environments/password fields where pasting may not be possible
 - Extract the archive to `%LOCALAPPDATA%\Microsoft\PowerToys\PowerToys Run\Plugins`
 - Open PowerToys
 
+## Usage
+- Select/Place cursor where text should be typed 
+- Open PowerToys Run
+- Input: "@@ \<text\>"
+- Select the result (ENTER)
+- \<text\> is typed into the selected location
+
 ## Example
 ![InputTyper Demonstration](/images/InputTyper.gif)
