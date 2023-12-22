@@ -1,6 +1,6 @@
 # PowerToys Run: Input Typer plugin
 
-Simple [PowerToys Run](https://learn.microsoft.com/windows/powertoys/run) plugin for easily typing input as if from a keyboard. Ideal for remote environments and other sceanrios where pasting isn't possible.
+Simple [PowerToys Run](https://learn.microsoft.com/windows/powertoys/run) plugin for easily typing input as if from a keyboard. Ideal for remote environments and other scenarios where pasting isn't possible.
 
 ![InputTyper Demonstration](/images/InputTyper.gif)
 
