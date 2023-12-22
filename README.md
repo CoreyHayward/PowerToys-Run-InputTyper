@@ -1,7 +1,8 @@
 # PowerToys Run: Input Typer plugin
 
-Simple [PowerToys Run](https://learn.microsoft.com/windows/powertoys/run) plugin for typing the input text as if it was sent from a keyboard input. 
-Useful for remote environments/password fields where pasting may not be possible.
+Simple [PowerToys Run](https://learn.microsoft.com/windows/powertoys/run) plugin for easily typing input as if from a keyboard. Ideal for remote environments and other sceanrios where pasting isn't possible.
+
+![InputTyper Demonstration](/images/InputTyper.gif)
 
 ## Requirements
 
@@ -21,6 +22,3 @@ Useful for remote environments/password fields where pasting may not be possible
 - Input: "@@ \<text\>"
 - Select the result (ENTER)
 - \<text\> is typed into the selected location
-
-## Example
-![InputTyper Demonstration](/images/InputTyper.gif)
