@@ -363,3 +363,10 @@ FodyWeavers.xsd
 
 # Jetbrains
 .idea/
+
+# Release build outputs
+InputTyper*.zip
+
+# Include dependecies
+!*/Libs/x64
+!*/Libs/ARM64
