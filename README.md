@@ -6,7 +6,6 @@ Simple [PowerToys Run](https://learn.microsoft.com/windows/powertoys/run) plugin
 
 ## Requirements
 
-- Visual Studio 2022
 - PowerToys minimum version 0.76.0
 
 ## Installation
