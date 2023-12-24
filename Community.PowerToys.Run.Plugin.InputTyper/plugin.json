@@ -4,9 +4,9 @@
   "IsGlobal": false,
   "Name": "InputTyper",
   "Author": "Corey Hayward",
-  "Version": "0.1.0",
+  "Version": "0.1.1",
   "Language": "csharp",
-  "Website": "https://github.com/CoreyHayward",
+  "Website": "https://github.com/CoreyHayward/PowerToys-Run-InputTyper",
   "IcoPathDark": "Images\\InputTyper.dark.png",
   "IcoPathLight": "Images\\InputTyper.light.png",
   "ExecuteFileName": "Community.PowerToys.Run.Plugin.InputTyper.dll"
