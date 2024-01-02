@@ -1,6 +1,5 @@
-﻿// Copyright (c) Microsoft Corporation
-// The Microsoft Corporation licenses this file to you under the MIT license.
-// See the LICENSE file in the project root for more information.
+﻿// Copyright (c) Corey Hayward. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 namespace Community.PowerToys.Run.Plugin.InputTyper
 {
