@@ -8,7 +8,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>Community.PowerToys.Run.Plugin.InputTyper</RootNamespace>
     <AssemblyName>Community.PowerToys.Run.Plugin.InputTyper</AssemblyName>
-    <Version>0.1.1</Version>
+    <Version>0.2.0</Version>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <Platforms>AnyCPU;x64;ARM64</Platforms>

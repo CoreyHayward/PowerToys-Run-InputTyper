@@ -18,6 +18,6 @@ Simple [PowerToys Run](https://learn.microsoft.com/windows/powertoys/run) plugin
 ## Usage
 - Select/Place cursor where text should be typed 
 - Open PowerToys Run
-- Input: "@@ \<text\>"
+- Input: "@@ \<text\>" or "@@" for clipboard
 - Select the result (ENTER)
 - \<text\> is typed into the selected location

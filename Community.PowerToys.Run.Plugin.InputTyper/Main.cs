@@ -51,6 +51,7 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
                 results.Add(new Result
                 {
                     Title = $"Type: {text}",
+                    SubTitle = "Types the text into the selected input.",
                     IcoPath = _icon_path,
                     Action = c =>
                     {
@@ -58,6 +59,20 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
                         return true;
                     },
                 });
+            }
+            else
+            {
+                results.Add(new Result
+                {
+                    Title = "Type Clipboard",
+                    SubTitle = "Types the current clipboard into the selected input.",
+                    IcoPath = _icon_path,
+                    Action = c =>
+                    {
+                        Task.Run(() => RunAsSTAThread(() => _typer.TypeClipboard(_beginTypeDelay)));
+                        return true;
+                    }
+                }) ;
             }
 
             return results;
@@ -94,6 +109,24 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
 
             var typeDelay = settings.AdditionalOptions.FirstOrDefault(x => x.Key == "BeginTypeDelay");
             _beginTypeDelay = (int)(typeDelay?.NumberValue ?? 200);
+        }
+
+        /// <summary>
+        /// Start an Action within an STA Thread
+        /// </summary>
+        /// <param name="action">The action to execute in the STA thread</param>
+        static void RunAsSTAThread(Action action)
+        {
+            AutoResetEvent @event = new AutoResetEvent(false);
+            Thread thread = new Thread(
+                () =>
+                {
+                    action();
+                    @event.Set();
+                });
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            @event.WaitOne();
         }
     }
 }
