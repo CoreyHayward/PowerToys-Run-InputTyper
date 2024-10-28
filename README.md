@@ -1,4 +1,13 @@
-# PowerToys Run: Input Typer plugin
+<div align="center">
+
+# PowerToys Run: Input Typer
+  
+[![GitHub release](https://img.shields.io/github/v/release/CoreyHayward/PowerToys-Run-InputTyper?style=flat-square)](https://github.com/CoreyHayward/PowerToys-Run-InputTyper/releases/latest)
+[![GitHub all releases](https://img.shields.io/github/downloads/CoreyHayward/PowerToys-Run-InputTyper/total?style=flat-square)](https://github.com/CoreyHayward/PowerToys-Run-InputTyper/releases/)
+[![GitHub release (latest by date)](https://img.shields.io/github/downloads/CoreyHayward/PowerToys-Run-InputTyper/latest/total?style=flat-square)](https://github.com/CoreyHayward/PowerToys-Run-InputTyper/releases/latest)
+[![Mentioned in Awesome PowerToys Run Plugins](https://awesome.re/mentioned-badge-flat.svg)](https://github.com/hlaueriksson/awesome-powertoys-run-plugins)
+
+</div>
 
 Simple [PowerToys Run](https://learn.microsoft.com/windows/powertoys/run) plugin for easily typing input as if from a keyboard. Ideal for remote environments and other scenarios where pasting isn't possible.
 
