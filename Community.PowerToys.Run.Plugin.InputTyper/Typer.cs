@@ -8,13 +8,12 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
     internal sealed class Typer
     {
         private readonly char[] _specialCharacters = { '{', '}', '+', '^', '%', '~', '(', ')'  };
-        private const int INTERKEYDELAY = 20;
 
         public bool TypeEnter { get; set; } = true;
 
-        public void Type(string str, int delay = 2000)
+        public void Type(string str, int initTypeDelay = 2000, int interKeyDelay = 20)
         {
-            Thread.Sleep(delay);
+            Thread.Sleep(initTypeDelay);
             foreach (var c in str.ToCharArray())
             {
                 // Some characters have special meaning and must be surrounded by '{}'
@@ -28,7 +27,7 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
                     SendKeys.SendWait(c.ToString());
                 }
                
-                Thread.Sleep(INTERKEYDELAY);
+                Thread.Sleep(interKeyDelay);
             }
         }
 

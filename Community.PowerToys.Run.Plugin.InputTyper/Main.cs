@@ -13,8 +13,9 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
         private PluginInitContext _context;
         private string _icon_path;
         private int _beginTypeDelay;
+		private int _interKeyDelay;
 
-        public string Name => "InputTyper";
+		public string Name => "InputTyper";
 
         public string Description => "Types the input text.";
 
@@ -30,7 +31,15 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
                 NumberValue = 200,
                 PluginOptionType = PluginAdditionalOption.AdditionalOptionType.Numberbox,
             },
-        };
+			new PluginAdditionalOption()
+			{
+				Key = "InterKeyDelay",
+				DisplayLabel = "Type Delay (ms)",
+				DisplayDescription = "Sets how long in milliseconds to wait between each key.",
+				NumberValue = 20,
+				PluginOptionType = PluginAdditionalOption.AdditionalOptionType.Numberbox,
+			},
+		};
 
         public void Init(PluginInitContext context)
         {
@@ -55,7 +64,7 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
                     IcoPath = _icon_path,
                     Action = c =>
                     {
-                        Task.Run(() => _typer!.Type(text, _beginTypeDelay));
+                        Task.Run(() => _typer!.Type(text, _beginTypeDelay, _interKeyDelay));
                         return true;
                     },
                 });
@@ -107,9 +116,12 @@ namespace Community.PowerToys.Run.Plugin.InputTyper
                 return;
             }
 
-            var typeDelay = settings.AdditionalOptions.FirstOrDefault(x => x.Key == "BeginTypeDelay");
-            _beginTypeDelay = (int)(typeDelay?.NumberValue ?? 200);
-        }
+            var beginTypeDelay = settings.AdditionalOptions.FirstOrDefault(x => x.Key == "BeginTypeDelay");
+            _beginTypeDelay = (int)(beginTypeDelay?.NumberValue ?? 200);
+
+			var interKeyDelay = settings.AdditionalOptions.FirstOrDefault(x => x.Key == "InterKeyDelay");
+			_interKeyDelay = (int)(interKeyDelay?.NumberValue ?? 20);
+		}
 
         /// <summary>
         /// Start an Action within an STA Thread
